@@ -13,7 +13,9 @@ export default class NewsItem extends Component {
           />
           <div className="card-body">
             <h5 className="card-title">
-              {this.props.title?.slice(0, 100) + "..."}
+              {this.props.title
+                ? this.props.title.slice(0, 100) + "..."
+                : "---"}
             </h5>
             <p className="card-text">
               {this.props.description
