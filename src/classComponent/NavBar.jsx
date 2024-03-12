@@ -65,9 +65,9 @@ export default class NavBar extends Component {
                 >
                   Other
                 </a>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu ">
                   <li>
-                    <Link className="dropdown-item" to="/Entertainment">
+                    <Link className="dropdown-item " to="/Entertainment">
                       Entertainment
                     </Link>
                   </li>

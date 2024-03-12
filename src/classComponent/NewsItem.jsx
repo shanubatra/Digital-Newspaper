@@ -24,7 +24,7 @@ export default class NewsItem extends Component {
             </p>
             <a
               href={this.props.url}
-              className="btn btn-primary"
+              className="btn btn-dark"
               target="_blank"
               rel="noreferrer"
             >
