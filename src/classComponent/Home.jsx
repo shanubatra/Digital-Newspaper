@@ -12,10 +12,14 @@ export default class Home extends Component {
   }
   getAPIData = async (query = "All") => {
     let response = await fetch(`
-    https://newsapi.org/v2/everything?q=${query}&language=${this.props.language}&sortBy=publishedAt&apiKey=ae42e0ab8270414aa091f62ec1a853d4`);
+    https://newsapi.org/v2/everything?q=${query}&language=${this.props.language}&sortBy=publishedAt&apiKey=91ac628b419f41e99d779cb7e6d063a7`);
     response = await response.json();
-    {console.log(await fetch(`
-    https://newsapi.org/v2/everything?q=${query}&language=${this.props.language}&sortBy=publishedAt&apiKey=ae42e0ab8270414aa091f62ec1a853d4`))}
+    {
+      console.log(
+        await fetch(`
+    https://newsapi.org/v2/everything?q=${query}&language=${this.props.language}&sortBy=publishedAt&apiKey=91ac628b419f41e99d779cb7e6d063a7`)
+      );
+    }
     this.setState({
       articles: response.articles,
       totalResults: response.totalResults,
