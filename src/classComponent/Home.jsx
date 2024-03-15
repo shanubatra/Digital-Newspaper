@@ -10,19 +10,14 @@ export default class Home extends Component {
       page: 1,
     };
   }
-  getAPIData = async (query = "All") => {
+  getAPIData = async (query = "all") => {
     let response = await fetch(`
-    https://newsapi.org/v2/everything?q=${query}&language=${this.props.language}&sortBy=publishedAt&apiKey=91ac628b419f41e99d779cb7e6d063a7`);
+    https://api.worldnewsapi.com/search-news?api-key=adfb3518b2494a8e9cd0388519c04f57&source-countries=in&text=${query}&language=${this.props.language}`);
     response = await response.json();
-    {
-      console.log(
-        await fetch(`
-    https://newsapi.org/v2/everything?q=${query}&language=${this.props.language}&sortBy=publishedAt&apiKey=91ac628b419f41e99d779cb7e6d063a7`)
-      );
-    }
+    console.log(response);
     this.setState({
-      articles: response.articles,
-      totalResults: response.totalResults,
+      articles: response.news,
+      totalResults: response.available,
     });
   };
 
@@ -37,9 +32,12 @@ export default class Home extends Component {
     }
   }
   render() {
+    {
+      console.log(this.state.articles);
+    }
     return (
       <div className="container-fluid">
-        <h5 className="background p-2 text-light text-center my-2">
+        <h5 className="background p-2 text-light text-center text-capitalize my-2">
           {this.props.q} News Articles
         </h5>
         <div className="row">
@@ -47,9 +45,9 @@ export default class Home extends Component {
             return (
               <NewsItem
                 key={index}
-                pic={item.urlToImage}
+                pic={item.image}
                 title={item.title}
-                description={item.description}
+                description={item.text}
                 url={item.url}
               />
             );

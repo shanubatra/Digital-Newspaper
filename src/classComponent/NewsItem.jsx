@@ -6,7 +6,8 @@ export default class NewsItem extends Component {
       <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 mb-10">
         <div className="card">
           <img
-            src={this.props.pic ? this.props.pic : "/image/noimage.jpg"}
+            // src={this.props.pic ? this.props.pic : "/image/noimage.jpg"}
+            src={this.props.pic}
             height="200px"
             className="card-img-top"
             alt="Loading"

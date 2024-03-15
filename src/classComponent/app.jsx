@@ -24,17 +24,17 @@ export default class App extends Component {
         <BrowserRouter>
           <NavBar changeLanguage={this.changeLanguage} changeSearch={this.changeSearch} />
           <Routes>
-            <Route path="/" element={<Home search={this.state.search} language={this.state.language} q="All" />} />
-            <Route path="/All" element={<Home search={this.state.search} language={this.state.language} q="All" />} />
-            <Route path="/Politics" element={<Home search={this.state.search} language={this.state.language} q="Politics" />} />
-            <Route path="/Education" element={<Home search={this.state.search} language={this.state.language} q="Education" />} />
-            <Route path="/Crime" element={<Home search={this.state.search} language={this.state.language} q="Crime" />} />
-            <Route path="/Entertainment" element={<Home search={this.state.search} language={this.state.language} q="Entertainment" />} />
-            <Route path="/Science" element={<Home search={this.state.search} language={this.state.language} q="Science" />} />
-            <Route path="/Technology" element={<Home search={this.state.search} language={this.state.language} q="Technology" />} />
-            <Route path="/Sports" element={<Home search={this.state.search} language={this.state.language} q="Sports" />} />
-            <Route path="/Cricket" element={<Home search={this.state.search} language={this.state.language} q="Cricket" />} />
-            <Route path="/Jokes" element={<Home search={this.state.search} language={this.state.language} q="Jokes" />} />
+            <Route path="/" element={<Home search={this.state.search} language={this.state.language} q="all" />} />
+            <Route path="/All" element={<Home search={this.state.search} language={this.state.language} q="all" />} />
+            <Route path="/Politics" element={<Home search={this.state.search} language={this.state.language} q="politics" />} />
+            <Route path="/Education" element={<Home search={this.state.search} language={this.state.language} q="education" />} />
+            <Route path="/Crime" element={<Home search={this.state.search} language={this.state.language} q="crime" />} />
+            <Route path="/Entertainment" element={<Home search={this.state.search} language={this.state.language} q="entertainment" />} />
+            <Route path="/Science" element={<Home search={this.state.search} language={this.state.language} q="science" />} />
+            <Route path="/Technology" element={<Home search={this.state.search} language={this.state.language} q="technology" />} />
+            <Route path="/Sports" element={<Home search={this.state.search} language={this.state.language} q="sports" />} />
+            <Route path="/Cricket" element={<Home search={this.state.search} language={this.state.language} q="cricket" />} />
+            <Route path="/Jokes" element={<Home search={this.state.search} language={this.state.language} q="jokes" />} />
           </Routes>
           <Footer />
         </BrowserRouter>
