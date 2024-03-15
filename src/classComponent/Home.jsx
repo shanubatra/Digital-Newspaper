@@ -14,6 +14,8 @@ export default class Home extends Component {
     let response = await fetch(`
     https://newsapi.org/v2/everything?q=${query}&language=${this.props.language}&sortBy=publishedAt&apiKey=ae42e0ab8270414aa091f62ec1a853d4`);
     response = await response.json();
+    {console.log(await fetch(`
+    https://newsapi.org/v2/everything?q=${query}&language=${this.props.language}&sortBy=publishedAt&apiKey=ae42e0ab8270414aa091f62ec1a853d4`))}
     this.setState({
       articles: response.articles,
       totalResults: response.totalResults,
